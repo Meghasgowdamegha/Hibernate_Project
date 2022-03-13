@@ -17,10 +17,10 @@ public class Client {
 	
     EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA-PU");
     EntityManager em = factory.createEntityManager();
+    
     em.getTransaction().begin();
         
-    
-	//Creating an object of all entity files
+    //Creating one shop
 	Shop shop = new Shop();
 	shop.setShop_id(100);
 	shop.setShopCategory("Stationary");
@@ -30,7 +30,9 @@ public class Client {
 	shop.setShopStatus("Top branded");
 	shop.setShopOwner("ShopOwner");
 	shop.setLeaseStatus("property");
+	em.persist(shop);
 	
+	//creating one employee
 	Employee employee = new Employee();
 	employee.setId(101);
 	employee.setName("Navya");
@@ -38,14 +40,14 @@ public class Client {
 	employee.setSalary(50000);
 	employee.setAddress("3rd block Jayanagar");
 	employee.setDesignation("system Engineer");
-	
 	em.persist(employee);
 	
 	IShopService service = new IShopServiceImpl();
 	service.addShop(shop);
 	
-	System.out.println("one shop entry and one employee entry is completed");
 	em.getTransaction().commit();
+	
+	System.out.println("one shop entry and one employee entry is completed");
 	}
 }
 	
