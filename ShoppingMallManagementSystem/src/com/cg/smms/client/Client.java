@@ -1,14 +1,13 @@
 package com.cg.smms.client;
 
 import javax.persistence.EntityManager;
+
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import com.cg.smms.entities.Employee;
 
 import com.cg.smms.entities.Shop;
-import com.cg.smms.service.IEmployeeService;
-import com.cg.smms.service.IEmployeeServiceImpl;
 import com.cg.smms.service.IShopService;
 import com.cg.smms.service.IShopServiceImpl;
 

@@ -2,8 +2,6 @@ package com.cg.smms.entities;
 
 import java.io.Serializable;
 
-
-import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,7 +27,7 @@ public class Employee implements Serializable
 		}
 	 
 	 @Id
-	 @GeneratedValue(strategy=GenerationType.IDENTITY)
+	 @GeneratedValue(strategy=GenerationType.AUTO)
 
 	 @Column(name="id")
      private int id;

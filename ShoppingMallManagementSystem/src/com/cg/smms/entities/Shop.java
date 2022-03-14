@@ -1,6 +1,8 @@
 package com.cg.smms.entities;
 
 import java.io.Serializable;
+
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,17 +18,17 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Shop")
+@Table(name="shop")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class Shop implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	
 	
 	@OneToMany(mappedBy ="shop",cascade=CascadeType.ALL)
-    private Set<Employee> employees = new HashSet<>();
+	private Set<Employee> employees = new HashSet<>();
 
 	@Column(name="shop_id")
 	private int Shop_id;
