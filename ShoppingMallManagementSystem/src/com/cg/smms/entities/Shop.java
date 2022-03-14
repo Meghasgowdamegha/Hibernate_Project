@@ -21,9 +21,8 @@ import javax.persistence.Table;
 public class Shop implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
 	
 	@OneToMany(mappedBy ="shop",cascade=CascadeType.ALL)

@@ -50,12 +50,12 @@ public class Employee implements Serializable
      private String designation;
 	 
 	 @ManyToOne
-	 @JoinColumn(name="shopid")
+	 @JoinColumn(name="shop_id")
 	 private Shop shop;
 		
+private Shop shop_id;
 
-
-	public Employee(int id, String name, int dob, float salary, String address, String designation, Shop shop) {
+	public Employee(int id, String name, int dob, float salary, String address, String designation, Shop shopId) {
 		
 		this.id = id;
 		this.name = name;
@@ -63,7 +63,7 @@ public class Employee implements Serializable
 		this.salary = salary;
 		this.address = address;
 		this.designation = designation;
-		this.shop = shop;
+		this.shop_id = shop_id;
 	}
 
 	public int getId() {
@@ -118,8 +118,8 @@ public class Employee implements Serializable
 		return shop;
 	}
 
-	public void setShop(Shop shop) {
-		this.shop = shop;
+	public void setShop(String shop) {
+		this.shop_id = shop_id;
 	}
 	 
 	

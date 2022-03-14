@@ -26,7 +26,7 @@ public class Client {
 	shop.setShopCategory("Stationary");
 	shop.setShopEmployeeId("Employee");
 	shop.setShopName("Reliance");
-	shop.setCustomer("Ramya");
+	shop.setCustomer("Ram");
 	shop.setShopStatus("Top branded");
 	shop.setShopOwner("ShopOwner");
 	shop.setLeaseStatus("property");
